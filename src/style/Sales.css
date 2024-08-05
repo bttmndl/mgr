@@ -1,0 +1,128 @@
+/* General styles */
+.sales-table-page {
+    font-family: "Roboto", sans-serif;
+    margin: 12px 16px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    position: relative;
+  }
+  .header-text {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header h2 {
+    font-size: 24px;
+    color: #343a40;
+  }
+  
+  .time-range-selector {
+    height: 50px;
+    width: 210px;
+    padding-top: 8px;
+  }
+  
+  .time-range-selector label {
+    font-size: 16px;
+    color: #495057;
+  }
+  
+  .time-range-dropdown {
+    padding: 8px;
+    margin-left: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .custom-range-inputs {
+    position: absolute;
+    top: 46px; /* Adjust this value based on your layout */
+    right: 0px;
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .custom-range-inputs label {
+    font-size: 16px;
+    color: #495057;
+  }
+  
+  .custom-range-inputs input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .sales-table th,
+  .sales-table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .sales-table th {
+    background-color: #e9ecef;
+    color: #495057;
+  }
+  
+  .sales-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  @media (max-width: 600px) {
+    .header {
+      margin-bottom: 15px;
+    }
+  
+    .header h2 {
+      font-size: 20px;
+    }
+  
+    .time-range-selector {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .time-range-selector label {
+      margin-bottom: 10px;
+    }
+  
+    .custom-range-inputs {
+      flex-direction: column;
+      align-items: flex-start;
+      top: 46px;
+      right: 0px;
+    }
+  
+    .custom-range-inputs label {
+      margin-bottom: 10px;
+    }
+  
+    .sales-table th,
+    .sales-table td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
