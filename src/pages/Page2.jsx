@@ -3,7 +3,8 @@ import "../style/Dore.css";
 
 const Dore = () => {
   const [sections, setSections] = useState({
-    doreProcess: { filled: false, visible: true, data: { weight: "", purityAu: "", purityAg: "", purityPt: "" } },
+    doreConsignment: {filled: false, visible: true, data: {ConNo:""}},
+    doreProcess: { filled: false, visible: false, data: { weight: "", purityAu: "", purityAg: "", purityPt: "" } },
     drilling: { filled: false, visible: false, data: { sampleLab: "", sampleRefree: "" } },
     dipSampleRaw: { filled: false, visible: false, data: { lab: "", refree: "" } },
     dip999: { filled: false, visible: false, data: { lab: "", refree: "" } },
@@ -32,6 +33,27 @@ const Dore = () => {
 
   return (
     <div className="gold-refinery-page">
+
+      {sections.doreConsignment.visible && (
+
+        <div className="section dore-consignment">
+          <h2>Dore Consignment</h2>
+          <lebel>
+            Con No
+            <input 
+              type="text"
+              className="input-decimal"
+              value = {sections.doreConsignment.data.ConNo}
+              onChange={(e)=> handleInputChange( "doreConsignment", "ConNo", e.target.value)}
+            />
+          </lebel>
+          {sections.doreConsignment.filled && (
+            <button className="nextButton" onClick={() => handleNext("doreConsignment", "doreProcess")}>Next</button>
+          )}
+        </div>
+
+      )}
+
       {sections.doreProcess.visible && (
         <div className="section dore-process">
           <h2>Raw Dore</h2>
