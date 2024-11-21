@@ -22,7 +22,7 @@ const saleData = [
   // Add more data as needed
 ];
 
-const Page3 = () => {
+const Sales = () => {
   const [timeRange, setTimeRange] = useState("Month");
   const [customRange, setCustomRange] = useState({ from: "", to: "" });
   const [openTimeRange, setOpenTimeRange] = useState(false);
@@ -169,4 +169,4 @@ const Page3 = () => {
   );
 };
 
-export default Page3;
+export default Sales;
